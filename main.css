@@ -24,6 +24,14 @@ h1 {
     background-color: #BBB;
 }
 
+.fa-sign-out{
+    font-size: 20px;
+}
+
+.total-songs{
+    margin-bottom: 10px;
+}
+
 .welcome-screen {
     height: 100%;
     width: 100%;
@@ -32,7 +40,24 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+.time-left{
+    text-align: center;
+}
 
+.ajax-loader {
+    visibility: hidden;
+    background-color: rgba(255,255,255,0.7);
+    position: absolute;
+    z-index: +100 !important;
+    width: 100%;
+    height:100%;
+}
+
+.ajax-loader img {
+    position: relative;
+    top:50%;
+    left:50%;
+}
 .main {
     width: 100%;
     height: 100%;
@@ -68,7 +93,7 @@ h1 {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .right.floated {
@@ -112,7 +137,7 @@ h1 {
 }
 
 .main .content {
-    width: 800px;
+    width: 1200px;
     margin: 2rem auto;
 }
 
@@ -127,11 +152,7 @@ h1 {
 }
 
 .list-headers > div:first-child {
-    width: 330px;
-}
-
-.list-headers > div:last-child {
-    text-align: right;
+    width: 200px;
 }
 
 .song-list .song {
@@ -149,43 +170,69 @@ h1 {
     height: 1rem;
 }
 .song > span:first-child {
-    width: 330px;
+    width: 200px;
+    padding-left: 0;
 }
 
-.song .song-duration {
-    text-align: right;
+.song > span:last-child {
+    width: 300px;
 }
-
+.song > div:nth-last-child(5)-child{
+    width: 100px;
+    text-align: center;
+}
 .song-list .song:hover {
     background-color: #282828;
 }
-
-
+.song-album{
+    text-align: left;
+}
+#artist , .song-artist{
+    width: 300px !important;
+}
 .song-length {
-    text-align: right;
+    text-align: left;
 }
-
-.content {
-    position: relative;
+.song-name , .song-artist , .song-lyrics, .song-album, .song-length, .song-video, .song-duration {
+    text-align: left;
+    height: 18px !important;
 }
-.current-song-wrapper {
-    position: absolute;
-    bottom: 0;
-    display: flex;
+.song-video {
+    text-align: left;
+    width: 150px !important;
 }
-
-.current-song-image {
-    height: 100px;
+.song-lyrics{
+    text-align: left;
+    margin-left: 0 !important;
+}
+.song a{
+    text-align: left;
+    display: inline-block;
+    width: 150px;
+    overflow: hidden;
+    height: 1rem;
+    color: #F1F1F1;
+    text-decoration: none;
+    height: 18px !important;
+}
+.loader_img{
     width: 100px;
-    margin-right: 1rem;
+    height: 100px;
+    background-color: grey;
 }
-
-.current-song-name {
-    font-size: 1.4rem;
-    margin-top: 4px;
-    margin-bottom: 0;
+.loader_div{
+    display: none;
+    position: absolute;
+    right: 625px;
+    top: 100px;
 }
+.current-song-image{
+    width: 50px;
+    height: 50px;
 
-.current-song-album {
-    margin-top: 0.4rem;
+}
+.current-song-wrapper{
+    margin-left: 210px;
+    margin-bottom: -40px;
+    margin-top: 80px;
 }
