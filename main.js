@@ -1,3 +1,4 @@
+
 function toggleSong() {
     var song = document.querySelector('audio');
 
@@ -220,3 +221,5 @@ function setupApp() {
         updateCurrentTime();
     },1000);
 }
+
+
